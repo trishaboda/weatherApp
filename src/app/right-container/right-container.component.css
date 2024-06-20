@@ -138,6 +138,146 @@
     border-radius: 40;
 }
 
+
+
+
+
+/*CSS for data box*/
 .right-container-data-box {
     flex: 12;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 20px;
+}
+
+.right-container-week-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    width: 75px;
+    height: 95px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
+    justify-content: center;
+    font-size: x-small;
+    font-weight: 500;
+}
+
+.card-day {
+    margin: 5px;
+    margin-top: 7px;
+
+}
+
+.card-temp-img img{
+    width: 40px;
+    height: 40px;
+}
+
+.card-temp-value {
+    margin: 5px;
+}
+
+.right-container-today-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container-todays-highlight {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-todays-highlight-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex: 2;
+    font-size: small;
+    font-weight: bold;
+}
+
+.right-container-todays-highlight-cards {
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container-todays-highligh-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 150px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.gauge {
+    flex: 2;
+    width: 50%;
+    max-width: 180px;
+    font-size: 32px;
+    color: #004033;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.gauge_body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #f3f3f4;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.gauge_fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #ffbf5e;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge_cover {
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: #000000;
+    font-size: 24px;
 }
