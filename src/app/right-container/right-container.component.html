@@ -4,9 +4,6 @@
             <div class="today" (click)="onTodayClick()" [className]="today == true?'today-active': 'today'">Today</div>
             <div class="week" (click)="onWeekClick()" [className]="week == true?'week-active': 'week'">Week</div>
             <div class="underline"  [className]="today == true?'underline underline-today':'underline underline-week'"></div>
-            <!-- <div class="" (click)="onTodayClick()" [ngClass]="{'today-active': today, 'inactive': !today}">Today</div>
-            <div class="" (click)="onWeekClick()" [ngClass]="{'week-active': week, 'inactive': !week}">Week</div>
-            <div class="underline"  [ngClass]="{'underline-today': today, 'underline-week': week}"></div> -->
         </div>
         <div class="nav-bar-metric">
             <div class="celsius" (click)="onCelsiusClick()" [className]="celsius == true?'celsius-active':'celsius'">°C</div>
@@ -17,5 +14,94 @@
         </div>
     </div>
     <div class="right-container-data-box">
+        <div class="right-container-week-cards" *ngIf="week == true">
+            <div class="card">
+                <div class="card-day">Sun</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Mon</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Tue</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Wed</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Thurs</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Fri</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Sat</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value"><span class = "max temp">15° </span><span class="temp-min">-3°</span></div>
+            </div>
+        </div>
+        <div class="right-container-today-cards" *ngIf="today == true">
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <div class="card-temp-img"><img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt=""></div>
+                <div class="card-temp-value">15°</div>
+            </div>
+        </div>
+        <div class="right-container-todays-highlight">
+            <div class="right-container-todays-highlight-title">Today's Highlight</div>
+            <div class="right-container-todays-highlight-cards">
+                <div class="right-container-todays-highligh-card">
+                    <div class="right-container-todays-highlight-card-title">UV Index</div>
+                    <div class="gauge">
+                        <div class="gauge_body">
+                            <div class="gauge_fill"></div>
+                            <div class="gauge_cover"></div>
+                        </div>
+                    </div>
+                    <div class="right-container-todays-highlight-value"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
