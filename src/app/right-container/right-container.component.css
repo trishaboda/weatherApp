@@ -1,0 +1,143 @@
+/*outer container for right container*/
+.right-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.right-container-nav-bar {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+/*CSS for today and week tabs*/
+.today {
+    margin-right: 10px;
+    color: #c5c5c5;
+}
+.today:hover {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+.today:active {
+    color: #1a1a1a;
+}
+
+.week {
+    margin-left: 10px;
+    color: #c5c5c5;
+}
+.week:hover {
+    color: #1a1a1a;
+    cursor: pointer;
+}
+.week:active {
+    color: #1a1a1a;
+}
+
+/*CSS for onclick underline*/
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: #1a1a1a;
+    margin-top: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.underline-today {
+    transform: translateX(-99px);
+}
+
+.underline-week {
+    transform: translateX(-45px); /* Adjust the translation based on the width of the "Today" tab and the margin */
+}
+
+.nav-bar-tabs {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.nav-bar-metric {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+}
+
+
+/*CSS for metric and fahrenheit tabs*/
+.celsius {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+}
+.celsius:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+.celsius-active {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content:center;
+    display: flex; 
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+
+.fahrenheit {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    font-size: small;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.fahrenheit:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #1a1a1a;
+}
+.fahrenheit-active {
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content:center;
+    display: flex; 
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    margin-left: 10px;
+    margin-right:10px;
+}
+
+/*CSS for profile image*/
+.profile-image img{
+    width: 30px;
+    height: 30px;
+    border-radius: 40;
+}
+
+.right-container-data-box {
+    flex: 12;
+}
