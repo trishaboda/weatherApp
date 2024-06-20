@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: medium;
+    font-size: small;
     font-weight: bold;
     margin-top: 15px;
 }
@@ -212,10 +212,14 @@
 
 .right-container-todays-highlight-value {
     margin-top: -30px;
+    padding-bottom: 10px;
+    flex: 1;
 }
 
 .right-container-todays-highlight-card-title {
     margin-top: 10px;
+    flex: 1;
+    color: #9b9a9a
 }
 
 .right-container-todays-highlight-cards {
@@ -232,8 +236,8 @@
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 10px;
-    width: 150px;
-    height: 120px;
+    width: 160px;
+    height: 123px;
     justify-content: center;
     align-items: center;
     text-align: center;
