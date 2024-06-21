@@ -382,3 +382,9 @@
     height: 25px;
     margin-right: 8px;
 }
+
+.humidity-summary {
+    font-size: small;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
