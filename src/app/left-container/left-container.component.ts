@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { faCloudRain, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faLocation } from '@fortawesome/free-solid-svg-icons';
 import { faCloud } from '@fortawesome/free-solid-svg-icons';
+import { WeatherService } from '../Services/weather.service';
 
 
 @Component({
@@ -14,4 +15,6 @@ export class LeftContainerComponent {
   faLocation:any = faLocation;
   faCloud:any = faCloud;
   faCloudRain:any = faCloudRain;
+
+  constructor(public weatherService: WeatherService) {}
 }
