@@ -11,23 +11,23 @@
   <div class="left-container-data-box">
     <div class="left-container-temperature-data">
       <div class="left-container-temperature-img">
-        <img class="weather-image" src="https://cdn-icons-png.flaticon.com/512/3093/3093390.png" alt="temperatureimg"/>
+        <img class="weather-image" src={{this.weatherService.temperatureData.summaryImage}} alt="summaryImage"/>
       </div>
-      <div class="left-container-temperature-value">12<sup>°C</sup></div>
-      <div class="left-container-date-time">Monday,<span> 16:00</span></div>
+      <div class="left-container-temperature-value">{{this.weatherService.celsius == true ? this.weatherService.temperatureData.temperature : this.weatherService.celsiusToFahrenheit(this.weatherService.temperatureData.temperature)}}<sup>{{this.weatherService.celsius == true ? "°C" : "°F"}}</sup></div>
+      <div class="left-container-date-time">{{this.weatherService.temperatureData.day}},<span> {{this.weatherService.temperatureData.time}}</span></div>
     </div>
     <div class="dividing-line"></div>
     <div class="left-container-other-details">
       <div class="left-container-temperature-summary">
         <div class="left-container-temperature-summary-phrase-img"><fa-icon [icon]="faCloud" style="color: #6495ED"></fa-icon></div>
-        <div class="left-container-temperature-summary-value">Mostly Cloudy</div>
+        <div class="left-container-temperature-summary-value">{{this.weatherService.temperatureData.summaryPhrase}}</div>
       </div>
     <div class="left-container-rain-stats">
       <div class="left-container-rain-stats-img"><fa-icon [icon]="faCloudRain" style="color: #6495ED"></fa-icon></div>
-      <div class="left-container-rain-stats-value">Rain-30%</div>
+      <div class="left-container-rain-stats-value">Rain- {{this.weatherService.temperatureData.rainPercent}}%</div>
     </div>
     <div class="left-container-location-details"></div>
-    <div class="left-container-location-img"><img src="https://previews.123rf.com/images/lildan1337/lildan13372302/lildan1337230202187/198048881-new-york-city-skyline-digital-art-style-illustration-painting-cartoon-style-of-new-york-city.jpg" alt="locationimg" /></div>
-    <div class="left-container-location-Name">Pune, India</div>
+    <div class="left-container-location-img"><img src="assets/location.png" alt="locationimg" /></div>
+    <div class="left-container-location-Name">{{this.weatherService.temperatureData.location}}</div>
   </div>
 </div>
