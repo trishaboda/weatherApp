@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LeftContainerComponent } from './left-container/left-container.component';
 import { RightContainerComponent } from './right-container/right-container.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
