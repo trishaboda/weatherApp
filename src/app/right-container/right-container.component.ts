@@ -3,6 +3,7 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { faFaceSmile } from '@fortawesome/free-solid-svg-icons';
 import { faFaceFrown } from '@fortawesome/free-solid-svg-icons';
+import { WeatherService } from '../Services/weather.service';
 @Component({
   selector: 'app-right-container',
   templateUrl: './right-container.component.html',
@@ -10,37 +11,29 @@ import { faFaceFrown } from '@fortawesome/free-solid-svg-icons';
 })
 export class RightContainerComponent {
 
+  constructor(public weatherService: WeatherService){};
+
   //fa icons
   faThumbsUp:any = faThumbsUp;
   faThumbsDown:any = faThumbsDown;
   faFaceSmile:any = faFaceSmile;
   faFaceFrown:any = faFaceFrown;
-
-  //control tabs variables
-  today: boolean = false;
-  week: boolean = true;
-
-  //metric value variables
-  celsius: boolean = true;
-  fahrenheit: boolean = false;
-
-
 //function to change tabs
   onTodayClick() {
-    this.today = true;
-    this.week = false;
+    this.weatherService.today = true;
+    this.weatherService.week = false;
   }
   onWeekClick() {
-    this.today = false;
-    this.week = true;
+    this.weatherService.today = false;
+    this.weatherService.week = true;
   }
   //function to control metric values
   onCelsiusClick() {
-    this.celsius = true;
-    this.fahrenheit = false;
+    this.weatherService.celsius = true;
+    this.weatherService.fahrenheit = false;
   }
   onFahrenheitClick() {
-    this.celsius = false;
-    this.fahrenheit = true;
+    this.weatherService.celsius = false;
+    this.weatherService.fahrenheit = true;
   }
 } 
