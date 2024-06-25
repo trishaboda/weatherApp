@@ -17,4 +17,8 @@ export class LeftContainerComponent {
   faCloudRain:any = faCloudRain;
 
   constructor(public weatherService: WeatherService) {}
+  onSearch(location: string) {
+    this.weatherService.cityName = location;
+    this.weatherService.getData();
+  }
 }
