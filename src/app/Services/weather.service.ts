@@ -112,7 +112,7 @@ export class WeatherService {
   //Method to get today's highlight data from the base variable
   fillTodaysHighlight(){
     this.todaysHighlight.airQuality = this.weatherDetails['v3-wx-globalAirQuality'].globalairquality.airQualityIndex;
-    this.todaysHighlight.humidity = this.weatherDetails['v3-wx-observations-current'].precip24Hour;
+    this.todaysHighlight.humidity = this.weatherDetails['v3-wx-observations-current'].relativeHumidity;
     this.todaysHighlight.sunrise = this.getTimeFromString(this.weatherDetails['v3-wx-observations-current'].sunriseTimeLocal);
     this.todaysHighlight.sunset = this.getTimeFromString(this.weatherDetails['v3-wx-observations-current'].sunsetTimeLocal);
     this.todaysHighlight.uvIndex = this.weatherDetails['v3-wx-observations-current'].uvIndex;
